@@ -30,23 +30,24 @@ public class Teleportation : MonoBehaviour
     [Header("Debug User Request")]
     public bool m_userRequestToTeleport;
     //public float  m_teleportRotation;
-
+    public bool m_userResquestChange;
     private void Update()
     {
        
 
 
-        if (m_userRequestToTeleport == true)
+        if (m_userResquestChange && m_userRequestToTeleport == true)
         {
             ComputeWhereUserNeedToBeTeleported(out m_hasHit, out m_hitPosition);
             DrawLineRedAndGreen(m_hasHit, m_hitPosition);
             SetRayDisplay(true);
         }
-        else if (m_userRequestToTeleport == false)
+        else if (m_userResquestChange && m_userRequestToTeleport == false)
         {
             ApplyTeleport(m_hitPosition);
             SetRayDisplay(false);
         }
+        m_userResquestChange = false;
     }
 
 
@@ -77,10 +78,12 @@ public class Teleportation : MonoBehaviour
 
     public void StartTeleport()
     {
+        m_userResquestChange = true;
         m_userRequestToTeleport = true;
     }
     public void StopTeleport()
     {
+        m_userResquestChange = true;
         m_userRequestToTeleport = false;
     }
    
