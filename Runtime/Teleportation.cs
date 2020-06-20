@@ -7,8 +7,8 @@ using UnityEngine;
 public class Teleportation : MonoBehaviour
 {
     public LayerMask m_raycastLayer;
-    [SerializeField]
-    Transform m_userHead, m_rootToTeleport, m_usePointerAnchor;
+    //[SerializeField]
+    public Transform m_userHead, m_rootToTeleport, m_usePointerAnchor;
 
     [SerializeField]
     Transform m_laserToScale;
