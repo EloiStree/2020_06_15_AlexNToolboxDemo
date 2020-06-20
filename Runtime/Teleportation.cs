@@ -36,7 +36,7 @@ public class Teleportation : MonoBehaviour
        
 
 
-        if (m_userResquestChange && m_userRequestToTeleport == true)
+        if ( m_userRequestToTeleport == true)
         {
             ComputeWhereUserNeedToBeTeleported(out m_hasHit, out m_hitPosition);
             DrawLineRedAndGreen(m_hasHit, m_hitPosition);
