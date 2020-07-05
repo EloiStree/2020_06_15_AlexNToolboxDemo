@@ -49,7 +49,6 @@ public class Teleportation : MonoBehaviour
     private Vector3 _currentPointerPosition;
     private Quaternion _currentPointerRotation;
     bool _tpTarget;
-    bool _checkThatUserTeleported;
 
     [Header("Debug (Don't Touch)")]
     public bool _hasHit;
@@ -68,10 +67,12 @@ public class Teleportation : MonoBehaviour
             DrawLineRedAndGreen(_hasHit, _hitPosition);
           
         }
-        else if (_tpTarget == false && _checkThatUserTeleported)
+        else if (_tpTarget == false )
         {
             ApplyTeleport(_hitPosition);
             StopDisplayRay();
+            _hasHit = false;
+            _hitPosition = Vector3.zero;
         }
     }
 
@@ -102,12 +103,10 @@ public class Teleportation : MonoBehaviour
     public void StartTeleport()
     {
         _tpTarget = true;
-        _checkThatUserTeleported = false;
     }
     public void StopTeleport()
     {
         _tpTarget = false;
-        _checkThatUserTeleported = true;
     }
 
 
@@ -137,7 +136,6 @@ public class Teleportation : MonoBehaviour
 
     private void ApplyTeleport(Vector3 whereToTeleport)
     {
-        _checkThatUserTeleported = false;
         Vector3 _offset = ComputeTheOffset();
         _rootToTeleport.position = whereToTeleport+ _offset;
     }
