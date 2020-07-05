@@ -1,9 +1,9 @@
 {
-  "name": "be.alexnavez.alexntoolbox",
-  "displayName": "AlexN Toolbox",
+  "name": "be.eloistree.teleportvirtualrealityuser",
+  "displayName": "Teleport Virtual Reality Tool",
   "version": "0.0.1",
   "unity": "2018.1",
-  "description": "You package description",
+  "description": "Allow to teleport the player to the pointed direction",
   "keywords": ["Script","Tool"],
   "category": "Script",
   "dependencies":{}
