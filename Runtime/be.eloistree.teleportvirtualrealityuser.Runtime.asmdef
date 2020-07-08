@@ -1,11 +1,7 @@
 {
-    "name": "be.alexn.toolboxeditor.Editor",
-    "references": [
-        "GUID:63183e86403384e4fadc547d91110c87"
-    ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "name": "be.eloistree.teleportvirtualrealityuser",
+    "references": [],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
