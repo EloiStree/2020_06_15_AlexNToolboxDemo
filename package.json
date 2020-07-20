@@ -6,5 +6,5 @@
   "description": "Allow to teleport the player to the pointed direction",
   "keywords": ["Script","Tool"],
   "category": "Script",
-  "dependencies":{}
+  "dependencies":{"be.eloistree.license":"0.0.1"}
 }
